@@ -1,4 +1,4 @@
-﻿using Notificator.Api.Notifications.Types.Emails;
+﻿using Notificator.Api.Models.Emails;
 using Notificator.Api.Services;
 
 namespace Notificator.Api.AppServices;
@@ -9,6 +9,6 @@ public static class ServiceRegistration
     {
         return services
             .AddScoped<SmtpServersCollection>()
-            .AddScoped<INotificationSender<EmailNotification, Email>, EmailNotificationSender>();
+            .AddScoped<INotificationServices<EmailNotification, EmailContent>, EmailNotificationServices>();
     }
 }

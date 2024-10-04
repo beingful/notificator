@@ -1,4 +1,4 @@
-﻿namespace Notificator.Api.Notifications.Types.Emails;
+﻿namespace Notificator.Api.Models.Emails;
 
 public enum EmailServer
 {

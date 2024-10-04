@@ -1,0 +1,6 @@
+@Notificator.Api_HostAddress = http://localhost:5084
+
+POST {{Notificator.Api_HostAddress}}/notify/by/email/
+Accept: application/json
+
+###

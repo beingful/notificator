@@ -1,6 +1,6 @@
-﻿namespace Notificator.Api.Notifications.Types.Emails;
+﻿namespace Notificator.Api.Models;
 
-public class Email : IContent
+public sealed class Message
 {
     public string? Subject { get; init; }
 

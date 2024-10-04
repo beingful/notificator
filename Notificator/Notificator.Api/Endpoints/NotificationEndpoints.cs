@@ -1,4 +1,4 @@
-﻿using Notificator.Api.Notifications.Types.Emails;
+﻿using Notificator.Api.Models.Emails;
 using Notificator.Api.Services;
 
 namespace Notificator.Api.Endpoints;
@@ -14,7 +14,7 @@ public static class NotificationEndpoints
     {
         webApplication.MapPost("notify/by/email", async (
             EmailNotification email,
-            INotificationSender<EmailNotification, Email> emailSender,
+            INotificationServices<EmailNotification, EmailContent> emailSender,
             CancellationToken cancellationToken) =>
         {
             await emailSender.SendAsync(email, cancellationToken);
